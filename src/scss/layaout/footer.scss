@@ -1,0 +1,31 @@
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color:#052d48;
+    align-items: center;
+  
+    img {
+        width: 150px;
+        height: 150px;
+        margin-right:90px;
+        @media all and (max-width:768px) {
+            width: 100px;
+            height: 100px;
+            margin-right: 30px;
+        }
+    }
+
+    p {
+        font-size: 15px;
+        margin-left: 80px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: white;
+
+        @media all and (max-width:768px) {
+            font-size: 9px;
+            margin-left: 40px;
+        }
+    }
+}
