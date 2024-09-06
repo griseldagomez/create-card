@@ -1,4 +1,4 @@
-import previwe from "../images/comparte.png"
+import preview from "../images/Comparte.jpg"
 import { Image } from "@chakra-ui/react";
 import Icons from "./Icons";
 function Card() {
@@ -17,7 +17,7 @@ function Card() {
                     width="100%"
                     minHeight="200px"
                     borderRadius='10px'
-                    src={previwe}
+                    src={preview}
                     alt='Rellena' />
       </>
   )

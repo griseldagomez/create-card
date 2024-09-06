@@ -1,7 +1,7 @@
 import { Image, Box, useMediaQuery } from '@chakra-ui/react'
-import Diseña from '../images/diseña.png';
-import Rellena from '../images/rellena.png';
-import Comparte from '../images/comparte.png';
+import Diseña from '../images/Diseña.jpg';
+import Rellena from '../images/Rellena.jpg';
+import Comparte from '../images/Comparte.jpg';
 
 
 function Images() {
