@@ -11,7 +11,7 @@ function Actions() {
             justifyContent="center"
             pt={2}
             pb={2}
-            margin='20px'
+            margin='30px'
         >
             <Button
                 size='lg'
@@ -21,8 +21,7 @@ function Actions() {
                 color='white'
                 fontSize='lg'
                 backgroundColor='#165e79'
-                fontFamily='Verdana, Geneva, Tahoma, sans-serif'
-                fontWeight='lighter'
+                fontFamily='-moz-initial'
                 as={Link} to='/create'>
                 Crear mi tarjeta
             </Button >

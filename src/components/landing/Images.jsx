@@ -14,29 +14,26 @@ function Images() {
                 flexDirection={mobile ? 'column' : 'row'}
                 justifyContent='space-evenly' 
                 alignItems="center"
-                margin='20px'
+                margin='30px'
                 marginTop={10}
                 color='black'
-                fontFamily='inherit'
+                fontFamily='-moz-initial'
+                fontWeight='bold'
             >
                 <Box display='flex' flexDirection={'column'} alignItems='center'>
                     <p>Diseña</p>
                     <Image
-                        border='1px'
-                        boxSize="150px"
-                        borderColor='gray'
-                        borderRadius='10px'
-                        src={Diseña}
-                        alt='Diseño' />
+                    borderRadius='full'
+                    boxSize='250px'
+                    src={Diseña}
+                    alt='diseña' />
                 </Box>
 
                 <Box display='flex' flexDirection={'column'} alignItems='center'>
                 <p>Rellena</p>      
                 <Image
-                    border='1px'
-                    boxSize="150px"
-                    borderColor='gray'
-                    borderRadius='10px'
+                   borderRadius='full'
+                    boxSize='250px'
                     src={Rellena}
                     alt='Rellena' />
                 </Box>
@@ -44,10 +41,8 @@ function Images() {
                 <Box display='flex' flexDirection={'column'} alignItems='center'>
                 <p>Comparte</p>
                 <Image
-                    border='1px'
-                    boxSize="150px"
-                    borderColor='gray'
-                    borderRadius='10px'
+                    borderRadius='full'
+                    boxSize='250px'
                     src={Comparte}
                     alt='Rellena' />
                 </Box>
