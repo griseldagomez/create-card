@@ -23,7 +23,7 @@ function Images() {
                     <p>Diseña</p>
                     <Image
                         border='1px'
-                        boxSize="200px"
+                        boxSize="150px"
                         borderColor='gray'
                         borderRadius='10px'
                         src={Diseña}
@@ -34,7 +34,7 @@ function Images() {
                 <p>Rellena</p>      
                 <Image
                     border='1px'
-                    boxSize="200px"
+                    boxSize="150px"
                     borderColor='gray'
                     borderRadius='10px'
                     src={Rellena}
@@ -45,7 +45,7 @@ function Images() {
                 <p>Comparte</p>
                 <Image
                     border='1px'
-                    boxSize="200px"
+                    boxSize="150px"
                     borderColor='gray'
                     borderRadius='10px'
                     src={Comparte}

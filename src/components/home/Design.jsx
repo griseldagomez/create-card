@@ -2,7 +2,6 @@
 import { AccordionItem, AccordionIcon, AccordionButton, AccordionPanel, Box, FormErrorMessage, FormControl, FormLabel, RadioGroup, VStack, Radio } from '@chakra-ui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faObjectUngroup } from '@fortawesome/free-solid-svg-icons';
-import { color } from 'framer-motion';
 
 function Design({ register, errors }) {
     const colorData = {
@@ -10,6 +9,7 @@ function Design({ register, errors }) {
         color2: ['#2b3c0d', '#728e42', '#6f9331'],
         color3: ['#165d5c', ' #093e3e', '#069b99']
     };
+  
 
     return (
         <AccordionItem p={2}>

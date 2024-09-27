@@ -5,6 +5,8 @@ import Landing from "../pages/Landing";
 import Home from "../pages/Home";
 import { Route, Routes } from 'react-router-dom';
 
+// console.log('Entorno:', process.env.NODE_ENV)
+
 const App = () => {
   return (
     <ChakraProvider>

@@ -14,6 +14,7 @@ function Home() {
     register,
     handleSubmit,
     formState: { errors },
+    watch,
   } = useForm();
 
   const onSubmit = (data) => console.log(data);
@@ -29,29 +30,44 @@ function Home() {
 
   const [input, setInput] = useState('')
 
+  const [projectImage, setProjectImage] = useState("");
+
+  const handleImage = (e) => {
+      //fotografía
+      const reader = new FileReader();
+      reader.onload = () => {
+          if (reader.result && typeof reader.result === "string") {
+              setProjectImage(reader.result.toString());
+          }
+      };
+      reader.readAsDataURL(e.target.files[0]);
+  };
+
   return ( 
     <>
-    <Header/>
-    <main className="home">
-      <form onSubmit={handleSubmit(onSubmit)} noValidate>
-        <div className="design">
-        
-        <Accordion defaultIndex={[0]} allowToggle  width='300px' marginTop='30px'>
-          <Design register={register} errors={errors} />
-          <Complete register={register} errors={errors}/>
-          <Share  />
-        </Accordion>
-        
-        </div>
-        <div className="card">
-        <Reset />
-        <Card />
-        <div className="icons">
-        <Icons  />
-        </div>
-        </div>
-      </form>
-    </main>
+      <Header/>
+      
+      <main className="home">
+        <form onSubmit={handleSubmit(onSubmit)} noValidate>
+          <div className="design">
+            <Accordion defaultIndex={[0]} allowToggle  width='300px' marginTop='30px'>
+              <Design register={register} errors={errors} />
+
+              <Complete register={register} errors={errors} handleImage={handleImage} projectImage={projectImage} />
+
+              <Share  />
+            </Accordion>
+          </div>
+
+          <div className="card">
+            <Reset />
+
+            <Card watch={watch} projectImage={projectImage} />
+
+            <Icons watch={watch} />
+          </div>
+        </form>
+      </main>
     </>
   );
 }

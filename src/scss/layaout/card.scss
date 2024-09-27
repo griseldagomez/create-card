@@ -50,6 +50,16 @@
         color: grey;
         font-weight: 500;
       }
+
+      &.color1 {
+        border-left-color: #220330;
+      }
+      &.color2 {
+        border-left-color: #2b3c0d;
+      }
+      &.color3 {
+        border-left-color: #165d5c;
+      }
     }
     .section-image {
       margin-top: 20px;
