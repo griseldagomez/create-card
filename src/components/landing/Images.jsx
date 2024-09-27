@@ -12,10 +12,11 @@ function Images() {
             <Box
                 display='flex' 
                 flexDirection={mobile ? 'column' : 'row'}
-                justifyContent='space-evenly' 
+                // justifyContent='space-evenly' 
+                justifyContent="center"
+                gap="80px"
                 alignItems="center"
-                margin='30px'
-                marginTop={10}
+                marginTop="60px"
                 color='black'
                 fontFamily='-moz-initial'
                 fontWeight='bold'
@@ -24,8 +25,8 @@ function Images() {
                     <p>Diseña</p>
                     <Image
                     borderRadius='full'
-                    boxSize='200px'
-                    src={Diseña}
+                    boxSize='250'
+                    src={Diseña} 
                     alt='diseña' />
                 </Box>
 
@@ -33,7 +34,7 @@ function Images() {
                 <p>Rellena</p>      
                 <Image
                    borderRadius='full'
-                    boxSize='200px'
+                    boxSize='250px'
                     src={Rellena}
                     alt='Rellena' />
                 </Box>
@@ -42,9 +43,10 @@ function Images() {
                 <p>Comparte</p>
                 <Image
                     borderRadius='full'
-                    boxSize='200px'
+                    boxSize='250px'
                     src={Comparte}
                     alt='Rellena' />
+                
                 </Box>
             </Box>
         </section>
