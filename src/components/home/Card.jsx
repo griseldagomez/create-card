@@ -14,12 +14,13 @@ function Card({ watch, projectImage }) {
 
       <Image
         border='1px'
-        boxSize="200px"
+        // boxSize="200px"
         borderColor='gray'
         marginTop= "20px"
         width="100%"
         minHeight="200px"
         borderRadius='10px'
+        object-fit= "contain"
         src={projectImage ? projectImage : preview}
         alt='Rellena' />
     </>
