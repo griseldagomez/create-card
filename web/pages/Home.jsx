@@ -70,18 +70,18 @@ function Home() {
           <div className="design">
             <Accordion defaultIndex={[0]} allowToggle  width='300px' marginTop='30px'>
               <Design register={register} errors={errors} />
-
               <Complete register={register} errors={errors} handleImage={handleImage} projectImage={projectImage} />
               <Share  />
+              {cardUrl && <Link to={cardUrl} target="_blank" className="card-url">Pincha aqui para ver tu tarjeta</Link>}
             </Accordion>
           </div>
+        
           <div className="card">
-            {/* <Reset /> */}
-            
+      
             <Card watch={watch} projectImage={projectImage} />
 
             <Icons watch={watch} />
-            {cardUrl && <Link to={cardUrl} target="_blank" className="card-url">Pincha aqui para ver tu tarjeta</Link>}
+            
           </div>
         </form>
       </main>

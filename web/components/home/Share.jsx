@@ -44,8 +44,8 @@ function Share() {
           </AccordionPanel>
         </Box>
       </AccordionItem>
-  );
-  
+  ); 
 }
+
 
 export default Share;
