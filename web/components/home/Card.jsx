@@ -1,6 +1,5 @@
-import preview from "../images/Comparte.jpg"
+import preview from "../../images/Comparte.jpg"
 import { Image } from "@chakra-ui/react";
-import Icons from "./Icons";
 
 function Card({ watch, projectImage }) {
   const [name, job, color,] = watch(['name', 'job', 'color', '']);

@@ -8,6 +8,7 @@ import Icons from "../components/home/Icons";
 import Share from "../components/home/Share";
 import { Accordion } from "@chakra-ui/react";
 import Header from "../components/Header";
+import { Link } from "react-router-dom";
 
 function Home() {
   const {
@@ -15,22 +16,40 @@ function Home() {
     handleSubmit,
     formState: { errors },
     watch,
-  } = useForm();
+  } = useForm()
+  
+  const [cardUrl, setCardUrl] = useState(null);
 
-  const onSubmit = (data) => console.log(data);
 
-  // const [accordionIndex, setAccordionIndex] = useState(0);
-
-  // useEffect(() => {
-  //   console.log(errors);
-  //   if (errors.color) {
-  //     setAccordionIndex(0);
-  //   }
-  // }, [errors]);
-
-  const [input, setInput] = useState('')
-
+  const onSubmit = (data) => {
+    fetch(`http://localhost:5000/projects`, {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        "color_palette": data.color,
+        "name": data.name,
+        "job": data.job,
+        "email":data.email,
+        "photo": projectImage,
+        "phone": data.tel,
+        "linkedin": data.linkedin,
+        "github":data.github
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        setCardUrl(data.cardUrl);
+      })
+      .catch((error) => {
+        console.log(error);
+      });  
+  };
+  
   const [projectImage, setProjectImage] = useState("");
+  
 
   const handleImage = (e) => {
       //fotografía
@@ -46,7 +65,6 @@ function Home() {
   return ( 
     <>
       <Header/>
-      
       <main className="home">
         <form onSubmit={handleSubmit(onSubmit)} noValidate>
           <div className="design">
@@ -54,17 +72,16 @@ function Home() {
               <Design register={register} errors={errors} />
 
               <Complete register={register} errors={errors} handleImage={handleImage} projectImage={projectImage} />
-
               <Share  />
             </Accordion>
           </div>
-
           <div className="card">
-            <Reset />
-
+            {/* <Reset /> */}
+            
             <Card watch={watch} projectImage={projectImage} />
 
             <Icons watch={watch} />
+            {cardUrl && <Link to={cardUrl} target="_blank" className="card-url">Pincha aqui para ver tu tarjeta</Link>}
           </div>
         </form>
       </main>

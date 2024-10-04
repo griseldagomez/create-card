@@ -45,6 +45,7 @@ function Share() {
         </Box>
       </AccordionItem>
   );
+  
 }
 
 export default Share;

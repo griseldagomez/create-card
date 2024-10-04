@@ -9,6 +9,7 @@ const server = express();
 // necesito que mi servidor acepte peticiones externas
 server.use(cors());
 server.use(express.json());
+server.set('view engine', 'ejs');
 
 async function getDBConnection() {
     const connection = await mysql.createConnection({
@@ -25,7 +26,7 @@ async function getDBConnection() {
   }
 
 // establecer el puerto de conexión
-const port = 5001;
+const port = 5000;
 server.listen(port, () => {
   console.log("Server is running on port " + port);
 });
@@ -59,7 +60,7 @@ server.get("/projects", async (req, res) => {
       const connection = await getDBConnection();
       const params = req.body;
       const autorQuerySQL =
-      "INSERT INTO card (color_palette, name, job, email, photo, phone, linkedin, github) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?)";
+      "INSERT INTO card (color_palette, name, job, email, photo, phone, linkedin, github) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
       const [projectResult] = await connection.query(autorQuerySQL, [
         params.color_palette,
         params.name,
@@ -76,7 +77,7 @@ server.get("/projects", async (req, res) => {
       res.json({
         success:true,
         result: projectResult,
-        // cardUrl: `${process.env.SERVER_DOMAIN}/detail/${projectResult.insertId}`,
+        cardUrl: `http://localhost:5000/detail/${projectResult.insertId}`,
       });
     } catch (e) {
       res.status(500);
@@ -86,3 +87,20 @@ server.get("/projects", async (req, res) => {
       });
     }
   });
+
+  server.get("/detail/:id", async (req, res) => {
+    const connection = await getDBConnection();
+    const id = req.params.id;
+    const sqlQuery =
+      "SELECT * FROM proyecto.card WHERE id_card = ?";
+    const [result] = await connection.query(sqlQuery, [id]);
+    connection.end();
+    console.log(result);
+    res.render("detail", { result: { ...result[0] } });
+  });
+
+const staticServer = "./web/public";
+server.use(express.static(staticServer));
+
+const ServerPublicStyles = './src/public-react/public-css';
+server.use(express.static(ServerPublicStyles));

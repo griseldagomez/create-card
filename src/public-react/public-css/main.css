@@ -1,0 +1,31 @@
+body {
+    background-color: antiquewhite;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    height: 300;
+}
+
+.title {
+    font-size: 24px;
+    color: lightslategrey;
+    font-family: initial;
+}
+
+.dates {
+    display: inline-block;
+    font-size: 20px;
+    font-family: initial;
+}
+
+.icons {
+    display: flex;
+    font-size: 20px;
+    justify-content: space-around;
+    text-decoration: none;
+
+}
+

@@ -120,6 +120,7 @@ function Complete({ register, errors, handleImage, projectImage }) {
                 
             </AccordionPanel>
         </AccordionItem>
+        
     );
 }
 
