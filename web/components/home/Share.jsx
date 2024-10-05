@@ -3,9 +3,24 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShareNodes } from '@fortawesome/free-solid-svg-icons';
 import { faAddressCard } from '@fortawesome/free-solid-svg-icons';
 import { Button } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
 
-function Share() {
+import {
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+  Text,
+} from '@chakra-ui/react'
+
+
+
+function Share({ isButtonEnabled,isOpen, onClose, cardUrl }) {
   return (
+    <>
       <AccordionItem p={3}>
         <h2 className="title-share">
         <AccordionButton>
@@ -35,7 +50,9 @@ function Share() {
             <Button
               backgroundColor='#165e79' 
               color='White'
-              type="submit">
+              type="submit"
+              disabled={!isButtonEnabled}
+            >
               <FontAwesomeIcon 
                 icon={faAddressCard} />
 
@@ -44,6 +61,23 @@ function Share() {
           </AccordionPanel>
         </Box>
       </AccordionItem>
+       <Modal isCentered isOpen={isOpen} onClose={onClose}>
+       <ModalOverlay
+      bg='blackAlpha.300'
+      backdropFilter='blur(10px) hue-rotate(90deg)'
+    />
+       <ModalContent>
+         <ModalHeader>Modal Title</ModalHeader>
+         <ModalCloseButton />
+         <ModalBody>
+           <Text> {cardUrl && <Link to={cardUrl} target="_blank" className="card-url">Pincha aqui para ver tu tarjeta</Link>}</Text>
+         </ModalBody>
+         <ModalFooter>
+           <Button onClick={onClose}>Close</Button>
+         </ModalFooter>
+       </ModalContent>
+     </Modal>
+   </>
   ); 
 }
 

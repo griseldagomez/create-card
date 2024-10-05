@@ -9,7 +9,7 @@ import Share from "../components/home/Share";
 import { Accordion } from "@chakra-ui/react";
 import Header from "../components/Header";
 import { Link } from "react-router-dom";
-
+import { useDisclosure } from '@chakra-ui/react';
 function Home() {
   const {
     register,
@@ -19,33 +19,46 @@ function Home() {
   } = useForm()
   
   const [cardUrl, setCardUrl] = useState(null);
+  const [isButtonEnabled, setIsButtonEnabled] = useState(true);
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const onSubmit = async (data) => {
+    setIsButtonEnabled(false);
 
+    try {
+      const response = await fetch(`http://localhost:5001/projects`, {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          "color_palette": data.color,
+          "name": data.name,
+          "job": data.job,
+          "email":data.email,
+          "photo": projectImage,
+          "phone": data.tel,
+          "linkedin": data.linkedin,
+          "github":data.github
+        }),
+      });
 
-  const onSubmit = (data) => {
-    fetch(`http://localhost:5000/projects`, {
-      method: "POST",
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        "color_palette": data.color,
-        "name": data.name,
-        "job": data.job,
-        "email":data.email,
-        "photo": projectImage,
-        "phone": data.tel,
-        "linkedin": data.linkedin,
-        "github":data.github
-      }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
+      if (response.ok) {
+        const data = await response.json();
+
         console.log(data);
         setCardUrl(data.cardUrl);
-      })
-      .catch((error) => {
-        console.log(error);
-      });  
+        onOpen();
+      } else {
+        // mostramos otro error
+        // van a venir errores del servidor (tipo 500 o 404)
+      }
+    } catch (e) {
+      // mostramos un error
+      // van a venir errores de internet (errores de coneccion)
+      // o del codigo
+    } finally {
+      setIsButtonEnabled(true);
+    }
   };
   
   const [projectImage, setProjectImage] = useState("");
@@ -71,8 +84,8 @@ function Home() {
             <Accordion defaultIndex={[0]} allowToggle  width='300px' marginTop='30px'>
               <Design register={register} errors={errors} />
               <Complete register={register} errors={errors} handleImage={handleImage} projectImage={projectImage} />
-              <Share  />
-              {cardUrl && <Link to={cardUrl} target="_blank" className="card-url">Pincha aqui para ver tu tarjeta</Link>}
+              <Share isButtonEnabled={isButtonEnabled} isOpen={isOpen} onClose={onClose} cardUrl={cardUrl} />
+             
             </Accordion>
           </div>
         
