@@ -61,22 +61,18 @@ function Share({ isButtonEnabled,isOpen, onClose, cardUrl }) {
           </AccordionPanel>
         </Box>
       </AccordionItem>
-       <Modal isCentered isOpen={isOpen} onClose={onClose}>
-       <ModalOverlay
-      bg='blackAlpha.300'
-      backdropFilter='blur(10px) hue-rotate(90deg)'
-    />
-       <ModalContent>
-         <ModalHeader>Modal Title</ModalHeader>
-         <ModalCloseButton />
-         <ModalBody>
-           <Text> {cardUrl && <Link to={cardUrl} target="_blank" className="card-url">Pincha aqui para ver tu tarjeta</Link>}</Text>
-         </ModalBody>
-         <ModalFooter>
-           <Button onClick={onClose}>Close</Button>
-         </ModalFooter>
-       </ModalContent>
-     </Modal>
+      <Modal isCentered isOpen={isOpen} onClose={onClose}>
+        <ModalContent>
+          <ModalHeader>Tu tarjeta de visita se ha creado</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+            <Text> {cardUrl && <Link to={cardUrl} target="_blank" className="card-url">Pincha aqui para ver tu tarjeta</Link>}</Text>
+          </ModalBody>
+          <ModalFooter>
+            <Button onClick={onClose}>Close</Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
    </>
   ); 
 }

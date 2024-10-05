@@ -15,12 +15,11 @@
       href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playwrite+BE+WAL:wght@100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Card</title>
   </head>
   <body>
     <main>
-      
         <div class="card">
           <h2 class="title">
              Tarjeta de presentación profesional
@@ -36,20 +35,20 @@
        <section class="icons">
             <a
             class="icons email"
-            href="<%= result.email %>"
+            href="mailto:<%= result.email %>"
             target="_blank"
-            title="Haz click para ver el código del proyecto"
+            
           >
-            Email
+          <i class="fa-solid fa-envelope"></i>
           </a>
 
           <a
           class=" icons tel"
-          href="<%= result.tel %>"
+          href="tel:<%= result.phone %>"
           target="_blank"
-          title="Haz click para ver el código del proyecto"
+        
         >
-          Phone
+        <i class="fa-solid fa-mobile-screen"></i>
         </a>
             <a
               class=" icons link"
@@ -58,15 +57,14 @@
               title="Haz click para ver el proyecto online"
               class="fa-brands fa-github"
             >
-              Linkedin
+            <i class="fa-brands fa-linkedin"></i>
             </a>
             <a
               class="icons icon__github"
-              href="<%= result.gitHub %>"
+              href="<%= result.github %>"
               target="_blank"
-              title="Haz click para ver el código del proyecto"
             >
-              GitHub
+            <i class="fa-brands fa-github"></i>
             </a>
     </section>
     </main>

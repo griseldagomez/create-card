@@ -25,7 +25,7 @@ function Home() {
     setIsButtonEnabled(false);
 
     try {
-      const response = await fetch(`http://localhost:5001/projects`, {
+      const response = await fetch(`http://localhost:5002/projects`, {
         method: "POST",
         headers: {
           'Content-Type': 'application/json',

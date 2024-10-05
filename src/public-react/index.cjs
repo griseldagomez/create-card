@@ -26,7 +26,7 @@ async function getDBConnection() {
   }
 
 // establecer el puerto de conexión
-const port = 5001;
+const port = 5002;
 server.listen(port, () => {
   console.log("Server is running on port " + port);
 });
@@ -77,7 +77,7 @@ server.get("/projects", async (req, res) => {
       res.json({
         success:true,
         result: projectResult,
-        cardUrl: `http://localhost:5001/detail/${projectResult.insertId}`,
+        cardUrl: `http://localhost:5002/detail/${projectResult.insertId}`,
       });
     } catch (e) {
       res.status(500);

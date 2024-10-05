@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faKeyboard } from '@fortawesome/free-solid-svg-icons';
 import { Accordion, AccordionItem, AccordionIcon, AccordionButton, AccordionPanel, Box, FormControl, FormLabel, FormErrorMessage, FormHelperText, useFormErrorStyles, Button } from '@chakra-ui/react';
-import { Input, InputGroup, InputLeftAddon, InputRightAddon } from '@chakra-ui/react';
+import { Input, InputGroup, InputLeftAddon, InputRightAddon, Stack } from '@chakra-ui/react';
 
 function Complete({ register, errors, handleImage, projectImage }) {
     return (
@@ -78,6 +78,7 @@ function Complete({ register, errors, handleImage, projectImage }) {
 
                 <FormControl isInvalid={errors.tel} isRequired id="tel">
                     <FormLabel>Teléfono</FormLabel>
+                    <Stack spacing={3}></Stack>
                     <InputGroup>
                         <InputLeftAddon>+34</InputLeftAddon>
                         <Input

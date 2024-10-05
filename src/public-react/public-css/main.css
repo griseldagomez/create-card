@@ -1,12 +1,6 @@
-body {
-    background-color: antiquewhite;
-}
-
 main {
     display: flex;
     justify-content: center;
-    width: 500px;
-    height: 300;
 }
 
 .title {
@@ -26,6 +20,5 @@ main {
     font-size: 20px;
     justify-content: space-around;
     text-decoration: none;
-
 }
 
