@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const mysql = require("mysql2/promise");
-
+require("dotenv").config();
 // crear el servidor web
 const server = express();
 // server.use(express.json());
@@ -26,7 +26,7 @@ async function getDBConnection() {
   }
 
 // establecer el puerto de conexión
-const port = 5002;
+const port = process.env.PORT || 5002;
 server.listen(port, () => {
   console.log("Server is running on port " + port);
 });

@@ -1,15 +1,14 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form"
 import Design from "../components/home/Design";
 import Complete from "../components/home/Complete";
 import Card from "../components/home/Card";
-import Reset from "../components/home/Reset";
 import Icons from "../components/home/Icons";
 import Share from "../components/home/Share";
 import { Accordion } from "@chakra-ui/react";
 import Header from "../components/Header";
-import { Link } from "react-router-dom";
 import { useDisclosure } from '@chakra-ui/react';
+
 function Home() {
   const {
     register,
@@ -25,7 +24,7 @@ function Home() {
     setIsButtonEnabled(false);
 
     try {
-      const response = await fetch(`http://localhost:5002/projects`, {
+      const response = await fetch(`/projects`, {
         method: "POST",
         headers: {
           'Content-Type': 'application/json',
