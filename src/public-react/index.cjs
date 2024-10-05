@@ -2,15 +2,15 @@ const express = require("express");
 const cors = require("cors");
 const mysql = require("mysql2/promise");
 require("dotenv").config();
+
 // crear el servidor web
 const server = express();
 // server.use(express.json());
 
 // necesito que mi servidor acepte peticiones externas
 server.use(cors());
-server.use(express.json());
+server.use(express.json({limit: '10mb'}));
 server.set('view engine', 'ejs');
-server.use(express.bodyParser({limit: '10mb'}));
 
 async function getDBConnection() {
     const connection = await mysql.createConnection({
