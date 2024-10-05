@@ -10,6 +10,7 @@ const server = express();
 server.use(cors());
 server.use(express.json());
 server.set('view engine', 'ejs');
+server.use(express.bodyParser({limit: '10mb'}));
 
 async function getDBConnection() {
     const connection = await mysql.createConnection({
@@ -24,7 +25,7 @@ async function getDBConnection() {
   
     return connection;
   }
-
+  
 // establecer el puerto de conexión
 const port = process.env.PORT || 5002;
 server.listen(port, () => {
