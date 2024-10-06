@@ -78,7 +78,7 @@ server.get("/projects", async (req, res) => {
       res.json({
         success:true,
         result: projectResult,
-        cardUrl: `http://localhost:5002/detail/${projectResult.insertId}`,
+        cardUrl: `https://create-card-cs6c.onrender.com/detail/${projectResult.insertId}`,
       });
     } catch (e) {
       res.status(500);
