@@ -93,7 +93,7 @@ server.get("/projects", async (req, res) => {
     const connection = await getDBConnection();
     const id = req.params.id;
     const sqlQuery =
-      "SELECT * FROM proyecto.card WHERE id_card = ?";
+      "SELECT * FROM proyecto.card WHERE idcard = ?";
     const [result] = await connection.query(sqlQuery, [id]);
     connection.end();
     console.log(result);
