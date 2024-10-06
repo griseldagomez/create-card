@@ -15,10 +15,10 @@ server.set('view engine', 'ejs');
 async function getDBConnection() {
     const connection = await mysql.createConnection({
       // configuro la conexión
-      host: "localhost",
-      user: "root",
-      password: "admin",
-      database: "proyecto",
+      host: "sql.freedb.tech",
+      user: "freedb_Griselda",
+      password: "%9K6&8TyTVY2JW@",
+      database: "freedb_Proyecto createCard",
     });
   
     connection.connect(); // conecto
@@ -38,7 +38,7 @@ server.get("/projects", async (req, res) => {
     try {
       const connection = await getDBConnection();
       const sqlQuery =
-        "SELECT * FROM proyecto.card";
+       "SELECT * FROM `freedb_Proyecto createCard`.card";
       const [projectsResult] = await connection.query(sqlQuery);
       await connection.end();
       console.log("projectsResult", projectsResult);
