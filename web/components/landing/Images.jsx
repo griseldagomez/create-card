@@ -21,7 +21,7 @@ function Images() {
                 fontFamily='-moz-initial'
                 fontWeight='bold'
                 width='100%'
-                color='rgb(92, 10, 92)'
+               
             >
                 <Box display='flex' flexDirection={'column'} alignItems='center'>
                     <p>Diseña</p>
