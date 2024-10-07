@@ -20,7 +20,7 @@ function Actions() {
                 border='2px'
                 color='white'
                 fontSize='lg'
-                backgroundColor='#165e79'
+                backgroundColor='rgb(92, 10, 92)'
                 fontFamily='-moz-initial'
                 as={Link} to='/create'>
                 Crear mi tarjeta

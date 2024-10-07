@@ -48,7 +48,7 @@ function Share({ isButtonEnabled,isOpen, onClose, cardUrl }) {
           <AccordionPanel
             className='button-container'>
             <Button
-              backgroundColor='#165e79' 
+              backgroundColor='rgb(92, 10, 92)' 
               color='White'
               type="submit"
               disabled={!isButtonEnabled}

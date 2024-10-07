@@ -1,7 +1,7 @@
 import { Image, Box, useMediaQuery } from '@chakra-ui/react'
-import Diseña from '../../images/Diseña.jpg';
-import Rellena from '../../images/Rellena.jpg';
-import Comparte from '../../images/Comparte.jpg';
+import Diseña from '../../images/diseña.png';
+import Rellena from '../../images/rellena.png';
+import Comparte from '../../images/comparte.png';
 
 
 function Images() {
@@ -16,16 +16,18 @@ function Images() {
                 justifyContent="center"
                 gap="80px"
                 alignItems="center"
-                marginTop="60px"
+                marginTop="150px"
                 color='black'
                 fontFamily='-moz-initial'
                 fontWeight='bold'
+                width='100%'
+                color='rgb(92, 10, 92)'
             >
                 <Box display='flex' flexDirection={'column'} alignItems='center'>
                     <p>Diseña</p>
                     <Image
                     borderRadius='full'
-                    boxSize='250'
+                    boxSize='150'
                     src={Diseña} 
                     alt='diseña' />
                 </Box>
@@ -34,7 +36,7 @@ function Images() {
                 <p>Rellena</p>      
                 <Image
                    borderRadius='full'
-                    boxSize='250px'
+                    boxSize='150px'
                     src={Rellena}
                     alt='Rellena' />
                 </Box>
@@ -43,9 +45,9 @@ function Images() {
                 <p>Comparte</p>
                 <Image
                     borderRadius='full'
-                    boxSize='250px'
+                    boxSize='150px'
                     src={Comparte}
-                    alt='Rellena' />
+                    alt='comparte' />
                 
                 </Box>
             </Box>

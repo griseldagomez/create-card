@@ -1,4 +1,4 @@
-import preview from "../../images/Comparte.jpg"
+import preview from "../../images/diseña.png"
 import { Image } from "@chakra-ui/react";
 
 function Card({ watch, projectImage }) {
