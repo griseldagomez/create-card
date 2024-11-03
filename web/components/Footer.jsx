@@ -13,12 +13,13 @@ function Footer() {
       display='flex'
       justifyContent='space-between'
       color='black'
-      fontSize='14px'
+      fontSize='12px'
+      alignItems='center'
       >
         <p>Creative Digital ©2024</p>
         <Box 
-        width='80px'
-        height='80px'>
+        width='95px'
+        height='95px'>
         
         <img src={logo}/>
         </Box>

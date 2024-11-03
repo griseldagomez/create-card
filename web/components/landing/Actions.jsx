@@ -16,7 +16,7 @@ function Actions() {
             <Button
                 size='lg'
                 height='48px'
-                width='200px'
+                width='180px'
                 border='2px'
                 color='white'
                 fontSize='lg'

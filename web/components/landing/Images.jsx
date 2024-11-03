@@ -21,7 +21,7 @@ function Images() {
                 fontWeight='bold'
                 width='100%'
                 textColor='rgb(92, 10, 92)'
-                marginTop='250px'
+                marginTop='150px'
                
             >
                 <Box display='flex' flexDirection={'column'} alignItems='center'>

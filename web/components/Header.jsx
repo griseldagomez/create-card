@@ -13,6 +13,7 @@ function Header() {
          gap='10px'
          alignItems='center'
          padding='15px'
+         marginTop='50px'
         >
           <Text as="h1">Crea tu tarjeta de visita</Text>
           <h1 className="title"></h1>
