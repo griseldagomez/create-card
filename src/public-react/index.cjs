@@ -27,6 +27,7 @@ async function getDBConnection() {
   }
   
 // establecer el puerto de conexión
+// eslint-disable-next-line no-undef
 const port = process.env.PORT || 5002;
 server.listen(port, () => {
   console.log("Server is running on port " + port);

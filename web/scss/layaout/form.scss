@@ -1,121 +1,121 @@
-form {
-    display: flex;
-    flex-direction: row;
-    gap: 50px;
-    align-items: center;
-    justify-content: center;
-    margin-top: 50px;
+// form {
+//     display: flex;
+//     flex-direction: row;
+//     gap: 50px;
+//     align-items: center;
+//     justify-content: center;
+//     margin-top: 50px;
 
-    @media all and (max-width:768px){
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap:10px;
+//     @media all and (max-width:768px){
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//     gap:10px;
     
-} }
+// } }
 
-.card {
-    background: white;
-    padding-bottom: 1px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 200px;
-}
-.icons {
-    gap: 20px;
-    align-items: center;
-    border-style: solid;
-    display: flex;
-    justify-content: center;
-    font-size: 18px;
-    @media all and (max-width:768px) {
-        display: flex;
-        gap: 15px;
-        margin-left: 70px;
-        margin-top: 20px;
-        height: 50px;
-        width: 50px;
-        border-style: solid;
-        display: flex;
-        justify-content: center;   
-        font-size: 18px
-    }
-    &.color1 {
-        color: #220330;
-      }
-      &.color2 {
-        color: #2b3c0d;
-      }
-      &.color3 {
-        color: #165d5c;
-      }
-}
+// .card {
+//     background: white;
+//     padding-bottom: 1px;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-around;
+//     width: 200px;
+// }
+// .icons {
+//     gap: 20px;
+//     align-items: center;
+//     border-style: solid;
+//     display: flex;
+//     justify-content: center;
+//     font-size: 18px;
+//     @media all and (max-width:768px) {
+//         display: flex;
+//         gap: 15px;
+//         margin-left: 70px;
+//         margin-top: 20px;
+//         height: 50px;
+//         width: 50px;
+//         border-style: solid;
+//         display: flex;
+//         justify-content: center;   
+//         font-size: 18px
+//     }
+//     &.color1 {
+//         color: #220330;
+//       }
+//       &.color2 {
+//         color: #2b3c0d;
+//       }
+//       &.color3 {
+//         color: #165d5c;
+//       }
+// }
 
-.title-design {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 10px;
-    font-weight: bolder;
-    color: black;
-}
+// .title-design {
+//     font-family: Verdana, Geneva, Tahoma, sans-serif;
+//     font-size: 10px;
+//     font-weight: bolder;
+//     color: black;
+// }
 
-.title-rellena {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 10px;
-    font-weight: bolder;
-    color: black;
-}
+// .title-rellena {
+//     font-family: Verdana, Geneva, Tahoma, sans-serif;
+//     font-size: 10px;
+//     font-weight: bolder;
+//     color: black;
+// }
 
-.title-share {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 10px;
-    font-weight: bolder;
-    color: black;
-}
+// .title-share {
+//     font-family: Verdana, Geneva, Tahoma, sans-serif;
+//     font-size: 10px;
+//     font-weight: bolder;
+//     color: black;
+// }
 
-.buttonOpen {
-    height: 25px;
-    width: 20px;
-    border-radius: 5px;
-    margin: 5px;
-}
+// .buttonOpen {
+//     height: 25px;
+//     width: 20px;
+//     border-radius: 5px;
+//     margin: 5px;
+// }
 
-.radioColours {
-    display: flex;
-    margin: 30px;
-    justify-content: space-between;
-}
+// .radioColours {
+//     display: flex;
+//     margin: 30px;
+//     justify-content: space-between;
+// }
 
-.divcol {
-    display: inline-block;
-    width: 32px;
-    height: 32px;
-}
+// .divcol {
+//     display: inline-block;
+//     width: 32px;
+//     height: 32px;
+// }
 
-.form-palette {
-    display: flex;
-    flex-direction: row;
-}
+// .form-palette {
+//     display: flex;
+//     flex-direction: row;
+// }
 
-.button-container {
-    display: flex;
-    justify-content: center;
-}
+// .button-container {
+//     display: flex;
+//     justify-content: center;
+// }
 
-button {
-    gap: 5px;
-    align-items: center;
-    flex-direction: row;
-}
+// button {
+//     gap: 5px;
+//     align-items: center;
+//     flex-direction: row;
+// }
 
 
-h3 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 15px;
-}
-.profile_image{
-    display: none;
-   width: 100%;
+// h3 {
+//     font-family: Verdana, Geneva, Tahoma, sans-serif;
+//     font-size: 15px;
+// }
+// .profile_image{
+//     display: none;
+//    width: 100%;
 
-}
+// }

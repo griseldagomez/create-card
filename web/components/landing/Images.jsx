@@ -14,13 +14,14 @@ function Images() {
                 flexDirection={mobile ? 'column' : 'row'}
                 // justifyContent='space-evenly' 
                 justifyContent="center"
-                gap="80px"
+                gap="20px"
                 alignItems="center"
-                marginTop="150px"
                 color='black'
                 fontFamily='-moz-initial'
                 fontWeight='bold'
                 width='100%'
+                textColor='rgb(92, 10, 92)'
+                marginTop='250px'
                
             >
                 <Box display='flex' flexDirection={'column'} alignItems='center'>
@@ -36,7 +37,7 @@ function Images() {
                 <p>Rellena</p>      
                 <Image
                    borderRadius='full'
-                    boxSize='150px'
+                    boxSize='150'
                     src={Rellena}
                     alt='Rellena' />
                 </Box>
@@ -45,7 +46,7 @@ function Images() {
                 <p>Comparte</p>
                 <Image
                     borderRadius='full'
-                    boxSize='150px'
+                    boxSize='150'
                     src={Comparte}
                     alt='comparte' />
                 

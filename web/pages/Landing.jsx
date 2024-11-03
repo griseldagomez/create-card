@@ -1,13 +1,16 @@
 import Header from "../components/Header";
 import Images from '../components/landing/Images';
 import Actions from '../components/landing/Actions';
+import { Box } from "@chakra-ui/react";
 
 function Landing() {
   return (
     <>
         <Header />
-        <Images />
-        <Actions />    
+        <Box flexGrow={1}>
+          <Images />
+          <Actions />
+        </Box>
     </>
   );
 }
